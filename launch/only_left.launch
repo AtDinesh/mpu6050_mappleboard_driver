@@ -1,0 +1,6 @@
+<launch>
+
+<include file="$(find mpu6050_mappleboard_driver)/launch/microstrain.launch"/>
+<include file="$(find mpu6050_mappleboard_driver)/launch/humanoid.launch"/>
+
+</launch>

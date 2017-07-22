@@ -1,0 +1,8 @@
+<launch>
+
+
+  <node pkg="microstrain_3dmgx2_imu" type="imu_node" name="microstrain_3dmgx325" args="_port:=/dev/ttyACM1" output="screen">
+  <remap from="/imu/data" to="/imu_microstrain"/>
+</node>
+
+</launch>
