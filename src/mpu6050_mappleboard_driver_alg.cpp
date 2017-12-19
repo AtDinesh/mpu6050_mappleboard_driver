@@ -52,8 +52,8 @@ bool Mpu6050MappleboardDriverAlgorithm::ReadSerial(double &ax, double &ay, doubl
   	unsigned char buf[64] = {0};
   	double gravity = 9.8;
   	double sec_to_rad = 3.14159265359/180.0;
-  	double accel_LSB = 1.0/8192.0; 
-  	double gyro_LSB = 1.0/131.0; 
+  	double accel_LSB = 8.0/32768.0; //IMU set to +/- 8g scale
+  	double gyro_LSB = 500.0/32768.0; //IMU set to +/- 500 deg/sec scale
   	double accel_LSB_g = accel_LSB * gravity;
   	double gyro_LSB_rad = gyro_LSB * sec_to_rad;
 
